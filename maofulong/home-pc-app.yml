@@ -19,3 +19,7 @@ feign:
 #authorize:
 #  request:
 #    authenticated: /api/pc/ae/manage/**
+
+
+dataSource:
+  name: "a-dataSource"
