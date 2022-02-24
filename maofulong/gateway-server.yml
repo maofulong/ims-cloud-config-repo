@@ -1,1 +1,38 @@
+#security:
+#  oauth2:
+#    client:
+#      id: auth-server
+#      access-token-uri: http://10.13.253.55:7777/auth/oauth/token
+#      user-authorization-uri: http://10.13.253.55:7777/auth/oauth/authorize
+#      client-id: gateway-server
+#      client-secret: pccpa
+#      scope: web
+#    resource:
+#      id: auth-server
+#      user-info-uri: http://10.13.253.55:7777/auth/user
+#      prefer-token-info: false
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 30000
+ribbon:
+  ConnectTimeout: 5000
+  ReadTimeout: 10000
+#开发阶段可能用到，为了解决跨域问题，配置通常为前端项目host:port,比如http://10.13.1.101:8000
+develop:
+  origin:
+zuul:
+  add-host-header: true
+  host:
+    socket-timeout-millis: 10000
+    connect-timeout-millis: 5000
+  routes:
+    home-pc-app:
+      path: /api/home/pc/**
+      serviceId: home-pc-app
+      sensitive-headers:
+      strip-prefix: false
 
