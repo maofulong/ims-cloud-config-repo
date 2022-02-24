@@ -22,4 +22,4 @@ feign:
 
 
 dataSource:
-  name: "a-dataSource"
+  name: "two-dataSource"
