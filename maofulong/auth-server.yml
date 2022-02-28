@@ -1,0 +1,6 @@
+security:
+  oauth2:
+    server:
+      check-token-url: http://localhost:7777/oauth/check_token
+  
+    
