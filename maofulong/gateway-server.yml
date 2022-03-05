@@ -36,7 +36,7 @@ zuul:
       sensitive-headers:
       strip-prefix: false
     front-login:
-      path: /
+      path: /**
       serviceId: front-login
       sensitive-headers:
       strip-prefix: false
