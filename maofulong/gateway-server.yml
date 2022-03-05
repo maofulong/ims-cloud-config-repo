@@ -35,4 +35,9 @@ zuul:
       serviceId: home-pc-app
       sensitive-headers:
       strip-prefix: false
+    front-login:
+      path: /
+      serviceId: front-login
+      sensitive-headers:
+      strip-prefix: false
 
