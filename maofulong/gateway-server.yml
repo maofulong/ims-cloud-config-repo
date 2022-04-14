@@ -40,10 +40,16 @@ zuul:
       serviceId: auth-server
       sensitive-headers:
       strip-prefix: false
+    test-app:
+      path: /api/test/**
+      serviceId: test-app
+      sensitive-headers:
+      strip-prefix: false
     front-login:
       path: /**
       serviceId: front-login
       sensitive-headers:
       strip-prefix: false
+      
 
 
